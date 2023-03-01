@@ -89,7 +89,7 @@ class HomeController extends GetxController {
       if (scopedToken != null) {
         appController.token?.value = scopedToken;
         var res =
-            await ApiHandler.get('properties', {"pagesize": "1"}, scopedToken);
+            await ApiHandler.get('properties', {"pagesize": "1000"}, scopedToken);
         var data = PropsModel.fromJson(json.decode(res)).data;
         propsModel = PropsModel.fromJson(json.decode(res));
 
